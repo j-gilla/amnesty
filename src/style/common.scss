@@ -1,0 +1,254 @@
+/**
+* Common Styles
+* Style Guide
+**/
+@import "./variables.scss";
+
+.App-main.fixed {
+  .sidebar {
+    position: fixed;
+    top: $task-toolbar-height;
+    right: 0;
+    height: 100%;
+    .ques-container {
+      height: 100%;
+    }
+  }
+  .task-toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .document-viewer {
+    margin-top: $task-toolbar-height
+  }
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+  right: 0px;
+}
+
+.section {
+  border-bottom: 1px $section-separator solid;
+  &.sec-question {
+    padding-bottom: 20px;
+    .ques-title {
+      font-size: 21px;
+      line-height: 23px;
+      border-bottom: 10.4px;
+    }
+    .ques-des{
+      text-align: left;
+      border-bottom: 28.6px;
+    }
+    .ques-content {
+      font-size: 16px;
+      line-height: 0.94;
+      margin-top: 29px;
+      margin-bottom: 16px;
+      color: $black;
+
+      @media (max-width: $screen-sm-max) {
+        margin: 16px 0px;
+        text-align: center;
+      }
+    }
+  }
+
+  &.sec-navigation{
+    padding: 15px 0px 17px 0px;
+  }
+
+  &.sec-more-info{
+    margin-top: 11px;
+    p{
+    }
+  }
+
+  &:last-child{
+    border-bottom: 0px;
+  }
+}
+
+.selection-ctrl {
+  padding: 0px;
+  margin: 0px;
+  .option {
+    list-style-type: none;
+    min-height: 39px;
+    border-left: solid 1px #c6c6c6;
+    border-right: solid 1px #c6c6c6;
+    border-bottom: solid 1px #c6c6c6;
+    padding: 9px 37px 13px 17px;
+    cursor: pointer;
+    &:first-child {
+      border-top: solid 1px #c6c6c6;
+    }
+    .opt-container {
+      //line-height: 38px;
+      & > * {
+        vertical-align: middle;
+      }
+    }
+    .check-box {
+      position: relative;
+      display: inline-block;
+      width: 17px;
+      height: 17px;
+      border-radius: 2px;
+      background-color: $white;
+      border: solid 2px $black;
+      line-height: normal;
+      .icon {
+        display: none;
+      }
+    }
+
+    &.checked {
+      background-color: $black;
+      color: white;
+      .icon {
+        display: inline-block;
+        color: $black;
+        position: absolute;
+        top: -1px;
+        left: 2px;
+        font-size: 12px;
+      }
+      .check-box {
+        background-color: $primary;
+      }
+    }
+
+    .opt-text {
+      margin-left: 7.6px;
+      width: 80%;
+      display: inline-block;
+      font-family: "Helvetica";
+      font-size: 13px;
+      line-height: 1.23;
+      letter-spacing: 0.3px;
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    display: flex;
+    flex-wrap: wrap;
+    .option {
+      width: 49%;
+      display: inline-block;
+      border: solid 1px #c6c6c6;
+      margin: 1px;
+    }
+  }
+  @media (max-width: $screen-xs-min) {
+    .option {
+      .check-box {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.dropdown-menu{
+  padding-left: 25px;
+  padding-right: 22.8px;
+
+  &.mn-align-right{
+    left: initial;
+    right: 0px;
+  }
+  li {
+    a{
+      padding: 3px 0px;
+    }
+  }
+}
+
+.ant-select{
+  .Select-control{
+    border-radius: 0px;
+  }
+}
+
+.react-datepicker__input-container{
+  width: 100%;
+  height: 100%;
+
+  input{
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.react-datepicker{
+  padding: 0px 16.8px 0px 8.4px;
+  font-size: 13px;
+  background-color: #ffffff;
+  box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  border: none;
+  color: #000000;
+
+  select{
+    background-color: white;
+  }
+  .react-datepicker__current-month{
+    font-family: $fontAmnesty;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+  }
+  .react-datepicker__day, .react-datepicker__day-name{
+    width: 28px;
+    height: 24px;
+    border-radius: 0px;
+    border: solid 2px $white;
+    margin: 0px 0px 0px 8.4px;
+  }
+  .react-datepicker__day{
+    margin-bottom: 6.7px;
+    font-family: $fontHel;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    &.react-datepicker__day--selected, &.react-datepicker__day--keyboard-selected{
+      border: solid 2px $black;
+      color: $black;
+      background-color: $primary;
+    }
+  }
+  .react-datepicker__day-name{
+    font-family: $fontAmnesty;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    text-align: center;
+  }
+  .react-datepicker__header {
+    background-color: white;
+    border-bottom: solid 1px #e6f0f7;
+  }
+  .react-datepicker__triangle{
+    border-bottom-color: $white;
+  }
+  .react-datepicker__navigation{
+    border: 10px solid transparent;
+    &.react-datepicker__navigation--previous{
+      border-right-color: $black;
+    }
+    &.react-datepicker__navigation--next{
+      border-left-color: $black;
+    }
+  }
+  .react-datepicker__day--outside-month{
+    color: #b3b3b3;
+  }
+  .react-datepicker__header__dropdown{
+    margin-bottom: 5px;
+  }
+}

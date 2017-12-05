@@ -1,0 +1,20 @@
+.agreement-content {
+  height: 65px;
+  line-height: 65px;
+  border: solid 1px #f1f1f1;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-left: 20px;
+  padding-right: 70px;
+  margin-bottom: 30px;
+  > * {
+    vertical-align: middle;
+  }
+
+  .agree-text{
+    width: 80%;
+    line-height: normal;
+    margin-left: 20px;
+    display: inline-block;
+  }
+}

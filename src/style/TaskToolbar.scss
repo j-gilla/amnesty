@@ -1,0 +1,131 @@
+@import "./variables.scss";
+
+.task-toolbar {
+  font-size: 17.5px;
+  background: $black;
+  height: $task-toolbar-height;
+  line-height: $task-toolbar-height;
+  color: $white;
+  text-align: center;
+  position: relative;
+  a {
+      color: $white;
+  }
+  .left-container{
+    padding-left: 200px;
+    float: left;
+  }
+  .right-container{
+    padding-right: 150px;
+    float: right;
+  }
+  .left-container, .right-container{
+    font-size: 14px;
+    letter-spacing: 0.2px;
+
+    li{
+      display: inline-block;
+      padding: 0px 26px;
+
+      &.active{
+        background-color: #363636;
+      }
+    }
+    a{
+      color: $white !important;
+    }
+  }
+  .progress-trophy, .progress-help {
+    position: absolute;
+    top: 0;
+  }
+  .progress-trophy {
+    padding-left: 26px;
+    color: $primary;
+    width: 180px;
+    text-align: left;
+    .trophy-group{
+      display: inline;
+      position: relative;
+
+      i{
+        color: $primary;
+      }
+    }
+    .trophy {
+      top: -3px;
+      position: absolute;
+      display: inline-block;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      border: 2.7px solid;
+    }
+    span {
+      color: $white;
+      font-size: 15px;
+      vertical-align: middle;
+    }
+  }
+  .progress-help {
+    right: 0;
+    width: 180px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: right;
+      li {
+        display: inline-block;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        &.help {
+          padding-right:26px;
+          padding-left:26px;
+        }
+        .xs-icon-help {
+          width: 21px;
+        }
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+  .progress-status {
+    display: inline;
+    font-size: 16px;
+    line-height: 15px;
+  }
+  // tablet
+  @media (max-width: $screen-sm-max) {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  // mobile
+  @media (max-width: $screen-xs-max) {
+    top: 0;
+    background: $white;
+    color: $black;
+    border-bottom: solid 1px #979797;
+    .xs-menu {
+      float: left;
+      width: 45px;
+      text-align: left;
+      padding-left: 20px;
+    }
+    .progress-help {
+      width: 45px;
+      padding-right: 20px;
+      ul li.help {
+        padding: 0;
+      }
+    }
+    img {
+      vertical-align: text-bottom;
+    }
+  }
+}

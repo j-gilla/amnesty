@@ -1,0 +1,78 @@
+@import "./variables.scss";
+
+.dialog-container {
+  position: relative;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  .dialog-body {
+    position: relative;
+    width: 40%;
+    min-width: 300px;
+    margin: 15vh auto;
+    background-color: #fff;
+    padding: 25px;
+    text-align: center;
+    z-index: 1050;
+    transition: opacity 300ms ease-in-out;
+    -webkit-transition: opacity 300ms ease-in-out;
+    .dialog-icon {
+      $size: 50px;
+      color: $primary;
+      font-size: 25px;
+      padding-top: 3px;
+      background-color: #000;
+      display: inline-block;
+      width: $size;
+      height: $size;
+      border-radius: $size / 2;
+      border: 5px solid $primary;
+    }
+    .dialog-title {
+      text-transform: uppercase;
+    }
+    .dialog-content {
+      margin: 30px auto;
+      width: 85%;
+    }
+    button {
+      display: block;
+      width: 200px;
+      margin: auto;
+      text-transform: uppercase;
+      padding: 10px 12px;
+      &.primary {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      &.no-border {
+        border: none !important;
+      }
+    }
+  }
+  .dialog-backdrop {
+    position: fixed;
+    z-index: 1040;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+  }
+  .dialog-body, .dialog-backdrop {
+    opacity: 0;
+  }
+  &.show {
+    z-index: 1050;
+    .dialog-body {
+      opacity: 1;
+    }
+    .dialog-backdrop {
+      opacity: 0.5;
+    }
+  }
+}

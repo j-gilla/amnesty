@@ -1,0 +1,28 @@
+.avatar-img{
+  display: inline-block;
+
+  img{
+    width: 70px;
+    border: solid 1px #6b6b6b;
+    border-radius: 50%;
+  }
+}
+.avatar {
+  margin-bottom: 20px;
+
+  .avatar-ctrl-group {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+}
+
+.profile-des{
+  margin: 25px 0px;
+}
+.btn-submit {
+  min-width: 140px;
+  height: 42px;
+  padding: 6px 12px;
+
+}

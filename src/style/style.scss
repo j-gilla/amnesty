@@ -1,0 +1,67 @@
+@import "./variables";
+@import "~bootstrap/dist/css/bootstrap";
+@import "~ionicons/scss/ionicons";
+
+/* Fonts */
+@font-face {
+  font-family: AmnestyTradeGothicW01BdCnNo20;
+  src: url('../fonts/AmnestyTradeGothicW01BdCnNo20.ttf') format('truetype'),
+  url('../fonts/AmnestyTradeGothicW01BdCnNo20.svg') format('svg'),
+    //url('../fonts/AmnestyTradeGothicW01BdCnNo20.ott') format('opentype'),
+  url('../fonts/AmnestyTradeGothicW01BdCnNo20.woff') format('woff');
+}
+
+body {
+  font-family: AmnestyTradeGothicW01BdCnNo20;
+}
+
+p, input, select, option {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #6b6b6b;
+}
+
+label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn, input, select, .form-control{
+  border-radius: 0px !important;
+  color: $black !important;
+}
+
+.btn-default{
+  border: solid 1px #ececec !important;
+  background-color: $white !important;
+}
+
+.btn-primary{
+  background-color: #ffff00 !important;
+  border: solid 1px #ffff00 !important;
+}
+
+.form-group{
+  label{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  input[type=text], input[type=password]{
+    height: 34px;
+    border-radius: 0px;
+    border: solid 1px #c6c6c6;
+  }
+  span{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  &.has-error{
+    span.help-inline{
+      color: #e6a7a6;
+    }
+    input[type=text], input[type=password]{
+      border: solid 1px #e6a7a6;
+    }
+  }
+}
+
+.ant-select{
+  font-family: $fontHel;
+}

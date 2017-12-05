@@ -1,0 +1,135 @@
+{
+  "id": 1,
+  "type": "images", //cause, location, images,
+  "total_of_user_completed": 2, //number of users who has completed this task
+  "asset": {//this is for highlight frame with yellow border, where user focus to answer question
+    "url": "http://www.shell.com.ng/sustainability/environment/oil-spills/february-2017/_jcr_content/par/oil_spills.stream/1490368436417/6c037dfd9a93b1de98f26c1a4fc84f0d43a171499994315db2e79976ac8bc53e/1796787-jiv.pdf"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "CHOICE",
+      "max_answer_num": 1,
+      //that mean this is one choice question
+      "title": "Measuring Unit",
+      "description": "Please let us know the measuring unit as displayed in the highlighted area",
+      "options": [//this will be displayed
+        {
+          "id": 3,
+          "value": "WAS84 (Latitude/Longitude)"
+        },
+        {
+          "id": 4,
+          "value": "Northing/Easting"
+        },
+        {
+          "id": 4,
+          "value": "Nigerian Measuring Unit"
+        }
+      ],
+      "answers": [{//this is user's answers and will be sent to server
+        "id": 3,
+        "value": "WAS84 (Latitude/Longitude)"
+      }],
+      "position_in_asset": {//this is our idea, you could suggest us to your opinion
+        "page": 1,
+        "start_point": {
+            "x": 10,
+            "y": 10
+          },
+          "width": 200,
+          "height": 200
+        }
+    },
+    {
+      "id": 3,
+      "max_answer_num": null,
+      //that mean this is multi choice question
+      "type": "CHOICE",
+      "title": "Verify Leak Point",
+      "description": "Which options are ticked/checked?",
+      "options": [
+        {
+          "id": 10,
+          "value": "Drilled hole",
+          "check": false
+        },
+        {
+          "id": 11,
+          "value": "Complete Rupture"
+        },
+        {
+          "id": 15,
+          "value": "Hack saw cut",
+          "checked": true
+        }
+      ],
+      "position_in_asset": {
+        "page": 1,
+        "start_point": {
+          "x": 10,
+          "y": 10
+        },
+        "width": 200,
+        "height": 200
+      }
+    },
+    {
+      "id": 3,
+      "type": "TEXT_INPUT",
+      "max_answer_num": 1, //that mean question has only 1 answer
+      "fields_of_answer": [{//that mean each answer has 2 field: longitude and latitude and
+        //the label of each property will be dipslay on user's screen
+        "name": "longitude",
+        "label": "Longitude"
+      },{
+        "name": "latitude",
+        "label": "Latitude"
+      }],
+      //that mean answer include 2 value: longitude and latitude
+      "title": "Spill Point Coordinates",
+      "description": "Please let us know the Spill Point Coordinates as displayed in the highlighted area.",
+      "answers": [],
+      "position_in_asset": {
+        "page": 1,
+        "start_point": {
+          "x": 10,
+          "y": 10
+        },
+        "width": 200,
+        "height": 200
+      }
+    },
+    {
+      "id": 4,
+      "type": "TEXT_INPUT",
+      "max_answer_num": 10, //that mean question has 10 text answer
+      "fields_of_answer": [{//that mean each answer has 2 field: longitude and latitude and
+        //the label of each property will be dipslay on user's screen
+        "name": "longitude",
+        "label": "Longitude"
+      },{
+        "name": "latitude",
+        "label": "Latitude"
+      }],
+      "title": "Impacted Area Coordinates",
+      "description": "Please let us know the Impacted Area Coordinates as displayed in the highlighted area.",
+      "answers": [{//this is user's answers and will be sent to server
+        "longitude": "1.20020202",
+        "latitude": "2.20020202"
+      },{
+        "longitude": "1.20020202",
+        "latitude": "2.20020202"
+      }],
+      "position_in_asset": {
+        "page": 1,
+        "start_point": {
+          "x": 10,
+          "y": 10
+        },
+        "width": 200,
+        "height": 200
+      }
+    }
+  ]
+}
